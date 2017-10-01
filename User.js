@@ -1,10 +1,10 @@
 
  function User() {
-    artsPts = 0
-    sciencePts = 0
-    appliedSciencePts = 0
-    commercePts = 0
-    matchedFaculty = null
+    this.artsPts = 0
+    this.sciencePts = 0
+    this.appliedSciencePts = 0
+    this.commercePts = 0
+    this.matchedFaculty = null
 
 }
 
@@ -45,47 +45,107 @@ User.prototype.chooseFaculty= function(){
     }
 }
 
-var userArts = {
-    creativeWritingsPts : 0,
-    economicsPts : 0,
-    englishLiteraturePts :0,
-    psychologyPts: 0,
-    filmActingPts: 0,
+function userArts () {
+    this.creativeWritingsPts = 0
+    this.economicsPts = 0
+    this.englishLiteraturePts = 0
+    this.psychologyPts = 0
+    this.filmActingPts = 0
+  }
 
-    addCreativeWritingPts: function (num) {
+    userArts.prototype.addCreativeWritingPts: function (num) {
         this.creativeWritingsPts += num;
     },
-    addEconomicsPts: function (num) {
+    userArts.prototype.addEconomicsPts: function (num) {
         this.economicsPts += num;
     },
-    addEnglishLiteraturePts: function (num) {
+    userArts.prototype.addEnglishLiteraturePts: function (num) {
         this.englishLiteraturePts += num;
     },
-    addPsychologyPts: function (num) {
+    userArts.prototype.addPsychologyPts: function (num) {
         this.psychologyPts += num;
     },
-    addFilmActingPts: function (num) {
+    userArts.prototype.addFilmActingPts: function (num) {
         this.filmActingPts += num;
     }
+
+
+
+function userScience () {
+  this.Chemistry = 0
+  this.Biology = 0
+  this.Physics = 0
+  this.ComputerScience = 0
+  this.Math = 0
 }
 
-// TODO
-var userScience = {
-
+userScience.prototype.addChemistryPts: function (num) {
+    this.ChemistryPts += num;
+},
+userScience.prototype.addBiologyPts: function (num) {
+    this.BiologyPts += num;
+},
+userScience.prototype.addPhysicsPts: function (num) {
+    this.PhysicsPts += num;
+},
+userScience.prototype.addComputerSciencePts: function (num) {
+    this.ComputerSciencePts += num;
+},
+userScience.prototype.addMathPts: function (num) {
+    this.MathPts += num;
 }
 
-// TODO
-var userAppliedScience = {
 
+function userAppliedScience () {
+    this.CivilEng = 0
+    this.BiochemEng = 0
+    this.ComputerEng = 0
+    this.electricalEng = 0
+    this.mechanicEng = 0
+  }
+
+  userScience.prototype.addCivilEngPts: function (num) {
+      this.CivilEngPts += num;
+  },
+  userScience.prototype.addBiochemEngPts: function (num) {
+      this.BiochemEngPts += num;
+  },
+  userScience.prototype.addComputerEngPts: function (num) {
+      this.ComputerEngPts += num;
+  },
+  userScience.prototype.addelectricalEngPts: function (num) {
+      this.electricalEngPts += num;
+  },
+  userScience.prototype.addmechanicEngPts: function (num) {
+      this.mechanicEngPts += num;
+  }
 }
 
-// TODO
-var userCommerce = {
+function userCommerce () {
+  this.accounting = 0
+  this.finance = 0
+  this.marketing = 0
+  this.operationsAndLogistics = 0
+  this.mechanicEng = 0
+  }
 
+  userScience.prototype.addaccountingPts: function (num) {
+    this.accountingPts += num;
+  },
+  userScience.prototype.addfinancePts: function (num) {
+    this.financePts += num;
+  },
+  userScience.prototype.addmarketingPts: function (num) {
+    this.marketingPts += num;
+  },
+  userScience.prototype.addoperationsAndLogisticsPts: function (num) {
+    this.operationsAndLogisticsPts += num;
+  },
+  userScience.prototype.addmechanicEngPts: function (num) {
+    this.mechanicEngPts += num;
+  }
 }
 
 
 
  module.exports = User;
-
-
