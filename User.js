@@ -1,46 +1,47 @@
 
-var user = {
-    artsPts : 0,
-    sciencePts : 0,
-    appliedSciencePts : 0,
-    commercePts : 0,
-    matchedFaculty : null,
+ function User() {
+    artsPts = 0
+    sciencePts = 0
+    appliedSciencePts = 0
+    commercePts = 0
+    matchedFaculty = null
 
-    addArtsPts: function (num) {
-        this.artsPts += num;
-    },
+}
 
-    addSciencePts : function (num) {
-        this.sciencePts += num;
-    },
+User.prototype.addArtsPts= function (num) {
+    this.artsPts += num;
+};
 
-    addAppliedSciencePts : function (num) {
-        this.appliedSciencePts += num;
-    },
+User.prototype.addSciencePts = function (num) {
+    this.sciencePts += num;
+};
 
-    addCommercePts : function (num) {
-        this.commercePts += num;
-    },
+User.prototype.addAppliedSciencePts = function (num) {
+    this.appliedSciencePts += num;
+};
 
-    chooseFaculty: function(){
-        var max = 0;
-        matchedFaculty = null;
-        if (this.artsPts > max){
-            max = this.artsPts;
-            matchedFaculty = "Arts"
-        }
-        if (this.sciencePts > max){
-            max = this.sciencePts;
-            matchedFaculty = "Science"
-        }
-        if (this.appliedSciencePts > max){
-            max = this.appliedSciencePts;
-            matchedFaculty = "Applied Sciences"
-        }
-        if (this.commercePts > max){
-            max = this.commercePts;
-            matchedFaculty = "Commerce"
-        }
+User.prototype.addCommercePts = function (num) {
+    this.commercePts += num;
+};
+
+User.prototype.chooseFaculty= function(){
+    var max = 0;
+    matchedFaculty = null;
+    if (this.artsPts > max){
+        max = this.artsPts;
+        matchedFaculty = "Arts"
+    }
+    if (this.sciencePts > max){
+        max = this.sciencePts;
+        matchedFaculty = "Science"
+    }
+    if (this.appliedSciencePts > max){
+        max = this.appliedSciencePts;
+        matchedFaculty = "Applied Sciences"
+    }
+    if (this.commercePts > max){
+        max = this.commercePts;
+        matchedFaculty = "Commerce"
     }
 }
 
@@ -85,5 +86,6 @@ var userCommerce = {
 
 
 
+ module.exports = User;
 
 
