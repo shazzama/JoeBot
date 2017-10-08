@@ -1,0 +1,21 @@
+{
+  "name": "JoeBot",
+  "description": "Joe the Bot",
+  "homepage": "",
+  "author": "",
+  "contributors": "",
+  "license": "GPL-3.0",
+  "repository": "N/A",
+  "bugs": "",
+  "keywords": [],
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro"
+  },
+  "dependencies": {
+    "botkit": "^0.6.3",
+    "micro": "^9.0.0",
+    "microrouter": "^2.2.3"
+  }
+}
